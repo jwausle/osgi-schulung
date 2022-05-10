@@ -1,0 +1,25 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+}
+
+plugins {
+    id "biz.aQute.bnd.workspace" version "6.1.0"
+}
+
+apply plugin: 'biz.aQute.bnd.workspace'
+
+subprojects {
+	if (plugins.hasPlugin('biz.aQute.bnd')) {	
+	    // See https://github.com/bndtools/bnd/issues/5002    
+	    java {
+	        if (bnd.get("javac.source")) {
+	            sourceCompatibility = bnd.get("javac.source");
+	        }
+	        if (bnd.get("javac.target")) {
+	            targetCompatibility = bnd.get("javac.target");
+	        }
+	    }
+	}
+}

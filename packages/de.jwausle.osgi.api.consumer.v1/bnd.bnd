@@ -1,0 +1,5 @@
+-buildpath: de.jwausle.osgi.api.provider.v1;version=latest
+-privatepackage: de.jwausle.osgi.api.consumer.v1.internal
+Import-Package: \
+ !java.*,\
+ *

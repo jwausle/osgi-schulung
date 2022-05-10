@@ -1,0 +1,9 @@
+
+Bundle-Version:             1.0.0.${tstamp}
+
+-noimportjava: true
+-nouses: true
+
+-remoteworkspace        true
+-runfw:                 org.apache.felix.framework
+-runee:                 JavaSE-11

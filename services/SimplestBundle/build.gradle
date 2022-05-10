@@ -1,0 +1,26 @@
+// In this section you declare where to find the dependencies of your project
+repositories {
+    mavenCentral()
+}
+
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+
+// Configure sensible layout
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+        resources {
+            srcDirs = ['resources']
+        }
+    }
+}
+    
+jar {
+    manifest {
+        from('META-INF/MANIFEST.MF')
+    }
+}
+

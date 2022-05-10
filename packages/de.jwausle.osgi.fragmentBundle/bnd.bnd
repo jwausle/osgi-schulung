@@ -1,0 +1,18 @@
+Fragment-Host: de.jwausle.osgi.fragmentHost
+Export-Package: de.jwausle.osgi.fragmentHost.internal
+
+-buildpath: \
+	org.osgi.service.component.annotations,\
+	org.osgi.framework,\
+	org.osgi.service.component
+-runfw: org.apache.felix.framework;version='[6.0.3,6.0.3]'
+-runbundles: \
+    org.apache.felix.gogo.runtime,\
+	org.apache.felix.gogo.command,\
+	org.apache.felix.gogo.shell,\
+	org.apache.felix.scr,\
+	org.osgi.util.promise,\
+	org.osgi.util.function,\
+	de.jwausle.osgi.fragmentHost
+-includeresource: src/main/resources	
+-privatepackage: de.jwausle.osgi.fragmentBundle.internal

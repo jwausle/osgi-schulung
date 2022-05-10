@@ -1,0 +1,47 @@
+-plugin.1.Local: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name=Local; \
+		local=${workspace}/cnf/localrepo; \
+		pretty=true
+
+-plugin.2.Templates: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name = Templates; \
+		pretty = true; \
+		local = ${build}/templates
+
+-plugin.3.Release: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name=Release; \
+		local=${workspace}/cnf/release; \
+		pretty=true
+		
+-plugin.4.build: \
+    aQute.bnd.repository.maven.provider.MavenBndRepository; \
+        snapshotUrl="https://oss.sonatype.org/content/repositories/snapshots/"; \
+        releaseUrl=https://repo.maven.apache.org/maven2/; \
+        index=${.}/build.mvn; \
+        readOnly=true; \
+        name="Build"		
+
+-plugin.5.IndexedMaven: \
+    de.mnl.osgi.bnd.repository.maven.provider.IndexedMavenRepositoryProvider; \
+        name=IndexedMaven; \
+        location=cnf/indexed-maven; \
+        releaseUrls="https://repo1.maven.org/maven2/"; \
+        logIndexing=true
+
+-pluginpath.IndexedMaved: \
+    ${workspace}/cnf/cache/de.mnl.osgi.bnd.repository-4.1.0.jar;\
+        url=https://github.com/mnlipp/de.mnl.osgi/raw/master/cnf/release/de.mnl.osgi.bnd.repository/de.mnl.osgi.bnd.repository-4.1.0.jar,\
+    ${workspace}/cnf/cache/biz.aQute.repository-6.0.0.jar;\
+        url=https://repo1.maven.org/maven2/biz/aQute/bnd/biz.aQute.repository/6.0.0/biz.aQute.repository-6.0.0.jar
+
+javac.source: 11
+javac.target: 11
+
+
+#bin 		: bin/main
+#testbin		: bin/test
+
+-releaserepo: Release
