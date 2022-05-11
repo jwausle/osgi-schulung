@@ -26,4 +26,7 @@ Import-Package: \
 	org.apache.commons.commons-fileupload,\
 	org.osgi.service.http,\
 	org.apache.felix.http.jetty
--runproperties: org.osgi.service.http.port=8888	
+-runproperties: \
+	org.osgi.service.http.port=8888
+	
+	

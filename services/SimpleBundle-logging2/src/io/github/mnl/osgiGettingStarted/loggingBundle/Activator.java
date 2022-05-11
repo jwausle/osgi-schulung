@@ -41,6 +41,8 @@ public class Activator implements BundleActivator {
                     if (helloWorld == null) {
                         System.out.println("Hello World started.");
                         helloWorld = new HelloWorld();
+                        // register service
+                        context.registerService(HelloWorld.class, helloWorld , null);
                         helloWorld.start();
                     }
                     return result;
@@ -103,6 +105,7 @@ public class Activator implements BundleActivator {
                         } catch (InterruptedException e) {
                         }
                         helloWorld = null;
+                        context.ungetService(context.getServiceReference(HelloWorld.class));
                         System.out.println("Hello World stopped.");
                     }
                     // Release any left over reference to the log service.

@@ -13,5 +13,7 @@ Service-Component: OSGI-INF/*.xml
 	org.apache.felix.gogo.shell,\
 	org.apache.felix.scr,\
 	org.osgi.util.promise,\
-	org.osgi.util.function
+	org.osgi.util.function,\
+
+#	de.jwausle.osgi.fragmentBundle
 -includeresource: src/main/resources

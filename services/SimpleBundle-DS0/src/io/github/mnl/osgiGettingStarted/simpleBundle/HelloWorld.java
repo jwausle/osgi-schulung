@@ -9,17 +9,13 @@ import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.log.LogService;
 
-/**
- * @author mnl
- *
- */
 public class HelloWorld implements Runnable {
 
     private volatile LogService logService;
 
     private Thread runner;
     
-    @Reference
+    //@Reference
     private void setLogService(LogService logService) {
         this.logService = logService;
     }
@@ -29,13 +25,13 @@ public class HelloWorld implements Runnable {
         this.logService = null;
     }
 
-    @Activate
+    //@Activate
     public void start(ComponentContext ctx) {
         runner = new Thread(this);
         runner.start();
     }
     
-    @Deactivate
+    //@Deactivate
     public void stop(ComponentContext ctx) {
         runner.interrupt();
         try {

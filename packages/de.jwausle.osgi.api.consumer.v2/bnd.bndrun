@@ -14,5 +14,4 @@
 	de.jwausle.osgi.api.consumer.v1;version=snapshot,\
 	de.jwausle.osgi.api.provider.v1;version=snapshot,\
 	de.jwausle.osgi.api.consumer.v2;version=snapshot,\
-	de.jwausle.osgi.api.provider.v2;version=snapshot
--runproperties: name=
+	de.jwausle.osgi.api.provider.v2;version=snapshot		
