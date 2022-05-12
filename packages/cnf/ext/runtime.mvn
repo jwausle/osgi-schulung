@@ -102,4 +102,4 @@ org.glassfish:javax.json:1.1.4
 
 biz.aQute:osgi.enroute.webconsole.xray.provider:2.2.0
 
-org.jahia.bundles:org.jahia.bundles.extender.jahiamodules:7.2.0.1
+#org.jahia.bundles:org.jahia.bundles.extender.jahiamodules:7.2.0.1
