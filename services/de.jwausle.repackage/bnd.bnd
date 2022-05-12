@@ -1,0 +1,6 @@
+-includeresource: @./lib/kotlinx-coroutines-reactive-1.5.2.jar,\
+  @./lib/common-java5-3.0.0-M5.jar
+
+Bundle-SymbolicName: kotlinx.coroutines.reactive
+Import-Package: \
+  !*
