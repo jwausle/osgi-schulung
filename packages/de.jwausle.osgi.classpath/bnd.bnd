@@ -1,0 +1,15 @@
+Bundle-Version: 2.0.0.${tstamp}
+Export-Package: de.jwausle.osgi.api.provider
+
+-noimportjava: true
+-nouses: true
+# Export 2.0
+-manifest: ./META-INF/MANIFEST.MF
+# Export 0.0
+#-manifest: ./META-INF/MANIFEST1.MF
+# Export 3.0
+#-manifest: ./META-INF/MANIFEST2.MF
+# Export 1.0.1
+#-manifest: ./META-INF/MANIFEST3.MF
+# Export 2.0 with Bundle-Version 3.0
+#-manifest: ./META-INF/MANIFEST4.MF

@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: de.jwausle.osgi.api.provider.v2
+Bundle-SymbolicName: de.jwausle.osgi.api.provider.v2
+Bundle-Version: 2.0.0.manual
+Export-Package: de.jwausle.osgi.api.provider;version="3.0.0"
