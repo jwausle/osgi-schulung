@@ -2,7 +2,7 @@ Import-Package: \
   de.jwausle.osgi.optionalPackage;resolution:=optional,\
   de.jwausle.osgi.dynamicPackage;resolution:=dynamic,\
   *
-Service-Component: de.jwausle.osgi.* 
+Service-Component: de.jwausle.osgi.*
   
 -buildpath: \
 	org.osgi.service.component.annotations,\

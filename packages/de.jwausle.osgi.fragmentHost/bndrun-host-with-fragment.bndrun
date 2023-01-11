@@ -1,0 +1,10 @@
+-runfw: org.apache.felix.framework;version='[6.0.3,6.0.3]'
+-runbundles: \
+    org.apache.felix.gogo.runtime,\
+	org.apache.felix.gogo.command,\
+	org.apache.felix.gogo.shell,\
+	org.apache.felix.scr,\
+	org.osgi.util.promise,\
+	org.osgi.util.function,\
+	de.jwausle.osgi.fragmentHost,\
+	de.jwausle.osgi.fragmentBundle

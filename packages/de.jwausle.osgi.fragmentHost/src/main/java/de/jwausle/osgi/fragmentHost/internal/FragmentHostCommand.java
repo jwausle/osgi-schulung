@@ -23,6 +23,9 @@ public class FragmentHostCommand {
 	}
 
 	public void fgm() throws Exception {
+		System.out.println("--------------------------------------------------");
+		System.out.println("Bundle context: " + bundleContext);
+		System.out.println("--------------------------------------------------");
 		printFolder(bundleContext.getBundle().findEntries("/folder", null, false));
 		System.out.println("--------------------------------------------------");
 		printFolder(FragmentHostCommand.class.getClassLoader().getResources("/folder/file.txt"));
