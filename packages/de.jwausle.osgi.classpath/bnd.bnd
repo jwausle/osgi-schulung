@@ -1,15 +1,21 @@
-Bundle-Version: 2.0.0.${tstamp}
-Export-Package: de.jwausle.osgi.api.provider
+Bundle-Version: 1.0.0.${tstamp}
+Export-Package: de.jwausle.osgi.classpath
 
 -noimportjava: true
 -nouses: true
-# Export 2.0
--manifest: ./META-INF/MANIFEST.MF
-# Export 0.0
-#-manifest: ./META-INF/MANIFEST1.MF
-# Export 3.0
-#-manifest: ./META-INF/MANIFEST2.MF
-# Export 1.0.1
-#-manifest: ./META-INF/MANIFEST3.MF
-# Export 2.0 with Bundle-Version 3.0
-#-manifest: ./META-INF/MANIFEST4.MF
+# 1) Export without version -> 0.0.0 
+#-manifest: ./META-INF/MANIFEST-simple.MF
+# 2) Export with version 
+#-manifest: ./META-INF/MANIFEST-default.MF
+# Import guava.cache  
+#-manifest: ./META-INF/MANIFEST-import-cache.MF
+# Import guava.cache with version 29.0  
+#-manifest: ./META-INF/MANIFEST-import-cache29.MF
+# Import guava.cache with version 29.0-30.0  
+#-manifest: ./META-INF/MANIFEST-import-cache29-30.MF
+# Export alternative version=2.0.0
+-manifest: ./META-INF/MANIFEST-export-alt-version.MF
+-buildpath: \
+	com.google.guava;version='29.0',\
+	org.osgi.framework
+-privatepackage: de.jwausle.osgi.classpath.internal

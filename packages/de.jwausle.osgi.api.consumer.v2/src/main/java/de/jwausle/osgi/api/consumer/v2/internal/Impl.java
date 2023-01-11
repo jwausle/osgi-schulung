@@ -5,10 +5,10 @@ import de.jwausle.osgi.api.provider.Api;
 public class Impl implements Api{
 
 	public void v2Call() {
-		System.out.println("V2 called");
+		System.out.println("Itnernal V2 called");
 	}
 
 	public void v1Call() {
-		System.out.println("V2 called");
+		System.out.println("Internal V2 called");
 	}
 }

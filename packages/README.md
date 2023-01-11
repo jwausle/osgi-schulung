@@ -1,0 +1,5 @@
+# General 
+
+```
+g! $exception printstacktrace
+```

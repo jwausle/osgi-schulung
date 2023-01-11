@@ -4,6 +4,6 @@ Bundle-Name: de.jwausle.osgi.classpath
 Bundle-SymbolicName: de.jwausle.osgi.classpath
 Bundle-Version: 1.0.0.manual
 Bundle-Activator: de.jwausle.osgi.classpath.internal.Activator
-Export-Package: de.jwausle.osgi.classpath;version="1.0.0"
+Export-Package: de.jwausle.osgi.classpath;version="2.0.0"
 Import-Package: org.osgi.framework
 Private-Package: de.jwausle.osgi.classpath.internal

@@ -1,0 +1,16 @@
+-runrequires: \
+	bnd.identity;id='org.apache.felix.gogo.runtime',\
+	bnd.identity;id='org.apache.felix.gogo.shell',\
+	bnd.identity;id='org.apache.felix.gogo.command'
+-resolve: manual
+
+# com.google.guava:failureaccess is required sind guava-27
+-runbundles: \
+	org.apache.felix.gogo.command;version='[1.1.0,1.1.1)',\
+	org.apache.felix.gogo.runtime;version='[1.1.2,1.1.3)',\
+	org.apache.felix.gogo.shell;version='[1.1.2,1.1.3)',\
+	de.jwausle.osgi.classpath;version=snapshot,\
+	com.google.guava:failureaccess;version=1.0.1,\
+	com.google.guava;version='[29.0,30.0)',\
+	com.google.guava;version='[30.0,31.0)',\
+	com.google.guava;version='[31.0,32.0)'
