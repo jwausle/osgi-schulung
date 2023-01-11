@@ -2,6 +2,8 @@ Import-Package: \
   de.jwausle.osgi.optionalPackage;resolution:=optional,\
   de.jwausle.osgi.dynamicPackage;resolution:=dynamic,\
   *
+Service-Component: de.jwausle.osgi.* 
+  
 -buildpath: \
 	org.osgi.service.component.annotations,\
 	org.apache.felix.gogo.runtime
@@ -10,23 +12,4 @@ Import-Package: \
 	org.apache.felix.gogo.runtime,\
 	de.jwausle.osgi.optionalPackage,\
 	de.jwausle.osgi.dynamicPackage
--runee: JavaSE-11
 -privatepackage: de.jwausle.osgi.example01.internal
--runfw: org.apache.felix.framework;version='[6.0.3,6.0.3]'
--runbundles: \
-    org.apache.felix.gogo.runtime,\
-	org.apache.felix.gogo.command,\
-	org.apache.felix.gogo.shell,\
-	org.apache.felix.scr,\
-	org.osgi.util.promise,\
-	org.osgi.util.function,\
-	org.apache.felix.webconsole,\
-	org.apache.felix.http.servlet-api,\
-	org.apache.servicemix.bundles.commons-io,\
-	org.apache.commons.commons-fileupload,\
-	org.osgi.service.http,\
-	org.apache.felix.http.jetty
--runproperties: \
-	org.osgi.service.http.port=8888
-	
-	

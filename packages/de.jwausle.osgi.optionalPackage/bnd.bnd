@@ -1,1 +1,2 @@
 Export-Package: de.jwausle.osgi.optionalPackage
+-privatepackage: de.jwausle.osgi.optionalPackage.internal
