@@ -10,7 +10,7 @@ import org.osgi.service.component.ComponentContext;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 
-@Component(property = { "osgi.command.scope:String=my",
+@Component(property = { "osgi.command.scope:String=jw",
 		"osgi.command.function:String=srv" }, service = SrvCommand.class)
 public class SrvCommand {
 

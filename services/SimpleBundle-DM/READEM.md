@@ -1,34 +1,42 @@
 # Added 
 
-- `bnd.bndrun`
-
-# Use cases 
-
-1) Inspect caps
+> Run `bnd.bndrun`
 
 ```
-g! inspect cap service
-org.apache.felix.framework [0] provides:
-----------------------------------------
-service; org.osgi.service.resolver.Resolver with properties:
-   service.bundleid = 0
-   service.id = 1
-   service.scope = singleton
+g! allservicereferences null null
+000004   0 Condition                                
+000011   4 Converter                                
+000014   4 Posix                                    
+000010   3 CommandProcessor                         
+000013   4 Procedural                               
+000003   0 StartLevel                               
+000025   6 ManagedService                           org.apache.felix.scr.ScrService
+000024   3 Converter                                
+000018   5 LogReaderService                         
+000008   2 Files                                    
+000009   3 ThreadIO                                 
+000001   0 Resolver                                 
+000007   2 Inspect                                  
+000019   5 LoggerAdmin                              
+000027   1 Runnable                                 
+000016   4 Shell                                    
+000023   6 ComponentCommands                        
+000028   1 SrvCommand                               
+000006   2 Basic                                    
+000026   6 MetaTypeProvider                         
+000017   5 LogService | LoggerFactory               
+000005   0 Object | Launcher                        
+000020   6 ServiceComponentRuntime                  
+000015   4 Telnet                                   
+000002   0 PackageAdmin                             
+000012   4 Builtin
+
+g! each (allservicereferences null null) { $it properties } 
+[service.id=4, objectClass=[Ljava.lang.String;@4dec3e11, service.scope=singleton, osgi.condition.id=true, service.bundleid=0]
 ...
-
-g! inspect cap osgi.wiring.package
-org.apache.felix.framework [0] provides:
-----------------------------------------
-osgi.wiring.package; org.osgi.framework 1.10.0 required by:
-   de.mnl.osgi.coreutils [5]
-   org.apache.felix.configadmin [8]
-   org.apache.felix.metatype [9]
-   org.apache.felix.gogo.command [2]
-   org.apache.felix.log [1]
-   SimpleBundle-DM [10]
-   de.mnl.osgi.osgi2jul [6]
-...      
+[osgi.command.function=[Ljava.lang.String;@759e1afe, service.id=12, objectClass=[Ljava.lang.String;@6d47ca3, osgi.command.scope=gogo, service.scope=singleton, service.bundleid=4]
 ```
+
 
 2) Service references
 

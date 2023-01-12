@@ -1,0 +1,15 @@
+-runfw: org.apache.felix.framework;version='[7.0.3,7.1)'
+-runee: JavaSE-11
+-runbundles: \
+	org.apache.felix.log,\
+	org.apache.felix.gogo.command,\
+	org.apache.felix.gogo.runtime,\
+	org.apache.felix.gogo.shell,\
+	de.mnl.osgi.osgi2jul;version=1.1.6,\
+	de.mnl.osgi.coreutils;version=2.0.0,\
+	SimpleBundle-logging
+-runbundles+: \
+    SimpleBundle-logging;startlevel=3,\
+    *;startlevel=2
+-runproperties: \
+    org.osgi.framework.startlevel.beginning=3

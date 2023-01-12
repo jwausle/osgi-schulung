@@ -18,6 +18,7 @@ public class Activator implements BundleActivator {
      * tracker detects the availability of all required services. */
     @Override
     public void start(BundleContext context) throws Exception {
+    	System.out.println("Starting ...");
         if (logServiceTracker == null) {
             // When called for the first time, create a new service tracker 
             // that tracks the availability of a log service.
@@ -124,6 +125,7 @@ public class Activator implements BundleActivator {
      * also stop our service. */
     @Override
     public void stop(BundleContext context) throws Exception {
+    	System.out.println("Stopping ...");
         logServiceTracker.close();
     }
 }

@@ -1,7 +1,15 @@
 # Registered services
 
+> Run: bndrun-resolved.bndrun
+
 ```
-bundle 7
+g! lb
+	...
+    7|Resolved   |    3|SimpleBundle-logging2 (1.1.0)|1.1.0
+
+g! bundlelevel -s 2 7
+
+g! bundle 7
 ...
 RegisteredServices   [HelloWorld]
 ServicesInUse        [LogService | LoggerFactory]
@@ -10,12 +18,16 @@ ServicesInUse        [LogService | LoggerFactory]
 
 # service reference
 
+> Run: bndrun-active.bndrun
+
 ```
 servicereferences io.github.mnl.osgiGettingStarted.loggingBundle.HelloWorld null
 000020   7 HelloWorld  
 ```
 
 # service properties 
+
+> Run: bndrun-active.bndrun
 
 ```
 g! each (servicereferences io.github.mnl.osgiGettingStarted.loggingBundle.HelloWorld null) { $it properties }
