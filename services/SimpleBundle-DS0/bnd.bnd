@@ -6,24 +6,7 @@ Service-Component: OSGI-INF/*.xml
 	osgi.core;version=4.3.1,\
 	org.apache.felix.dependencymanager,\
 	org.apache.felix.dependencymanager.annotation
--includeresource: OSGI-INF=OSGI-INF	
--runfw: org.apache.felix.framework;version='[7.0.3,7.0.3]'
--runee: JavaSE-11
--runbundles: \
-	org.apache.felix.log,\
-	org.apache.felix.gogo.command,\
-	org.apache.felix.gogo.runtime,\
-	org.apache.felix.gogo.shell,\
-	de.mnl.osgi.coreutils,\
-	de.mnl.osgi.osgi2jul,\
-	org.apache.felix.dependencymanager,\
-	org.apache.felix.configadmin,\
-	org.apache.felix.metatype,\
-	org.apache.felix.dependencymanager.runtime,\
-	org.osgi.service.component,\
-	org.osgi.util.promise,\
-	org.osgi.util.function,\
-	org.apache.felix.scr
+-includeresource: OSGI-INF=OSGI-INF
 -pluginpath:\
 	${workspace}/cnf/cache/org.apache.dependencymanager.annotation-5.0.0.jar;\
 	url=https://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.dependencymanager.annotation/5.0.0/org.apache.felix.dependencymanager.annotation-5.0.0.jar	

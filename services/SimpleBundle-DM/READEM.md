@@ -37,7 +37,6 @@ g! each (allservicereferences null null) { $it properties }
 [osgi.command.function=[Ljava.lang.String;@759e1afe, service.id=12, objectClass=[Ljava.lang.String;@6d47ca3, osgi.command.scope=gogo, service.scope=singleton, service.bundleid=4]
 ```
 
-
 2) Service references
 
 ```

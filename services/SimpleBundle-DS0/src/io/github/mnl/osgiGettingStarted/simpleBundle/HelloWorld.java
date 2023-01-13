@@ -18,10 +18,12 @@ public class HelloWorld implements Runnable {
     //@Reference
     private void setLogService(LogService logService) {
         this.logService = logService;
+        logService.log(LogService.LOG_WARNING, "Bound log service to HelloWorld");
     }
 
     // Reflected by DS implementation when LogService gone 
     private void unsetLogService(LogService logService) {
+    	logService.log(LogService.LOG_WARNING, "Unbound log service from HelloWorld");
         this.logService = null;
     }
 
@@ -46,8 +48,8 @@ public class HelloWorld implements Runnable {
     public void run() {
         System.out.println("Hello World!");
         while (!runner.isInterrupted()) {
-            try {
-                logService.log(LogService.LOG_WARNING, "Hello Word sleeping");
+            try {            	
+                logService.log(LogService.LOG_INFO, "Hello Word sleeping");
                 Thread.sleep (5000);
             } catch (InterruptedException e) {
                 break;

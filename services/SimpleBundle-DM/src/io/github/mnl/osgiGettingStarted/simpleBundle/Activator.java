@@ -9,7 +9,7 @@ public class Activator extends DependencyActivatorBase {
 	
 	public void start(BundleContext context) throws Exception {
 	    super.start(context);
-		System.out.println("Starting bundle");
+		System.out.println("Starting bundle");		
 	}
 	
 	public void init(BundleContext context, DependencyManager manager)
