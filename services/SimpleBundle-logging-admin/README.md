@@ -1,4 +1,4 @@
-# Change log level
+cm:get org.osgi.service.log.admin# Change log level
 
 > https://mnlipp.github.io/osgi-getting-started/ConfigurationAdmin.html
 

@@ -17,4 +17,5 @@ Bundle-Activator: io.github.mnl.osgiGettingStarted.loggingBundle.Activator
 	org.apache.felix.configadmin,\
 	org.apache.felix.scr,\
 	org.osgi.util.promise,\
-	org.osgi.util.function
+	org.osgi.util.function,\
+	org.osgi.service.component

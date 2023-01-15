@@ -19,6 +19,7 @@ public class HelloWorld extends Thread {
                 Activator.logService.log(LogService.LOG_INFO, "Hello Word sleeping");
                 sleep (5000);
             } catch (InterruptedException e) {
+            	Activator.logService.log(LogService.LOG_WARNING, "Interuption because " + e.getCause());
                 break;
             }
         }
