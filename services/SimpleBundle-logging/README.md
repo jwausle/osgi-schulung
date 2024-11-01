@@ -12,7 +12,13 @@ g! bundle 7
 RegisteredServices   null
 ServicesInUse        null
 
-g! start 7
+g! allservicereferences null null
+
+000002   0 PackageAdmin
+..
+000004   0 Condition
+
+g! bundlelevel -s 2 7
 g! bundle 7
 ...
 RegisteredServices   [HelloWorld]

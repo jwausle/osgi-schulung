@@ -6,4 +6,4 @@ Bundle-Version:             1.0.0.${tstamp}
 
 -remoteworkspace        true
 -runfw:                 org.apache.felix.framework
--runee:                 JavaSE-11
+-runee:                 JavaSE-17

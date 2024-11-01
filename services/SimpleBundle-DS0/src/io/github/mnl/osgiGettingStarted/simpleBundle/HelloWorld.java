@@ -18,12 +18,12 @@ public class HelloWorld implements Runnable {
     //@Reference
     private void setLogService(LogService logService) {
         this.logService = logService;
-        logService.log(LogService.LOG_WARNING, "Bound log service to HelloWorld");
+        System.out.println("Bound log service to HelloWorld");
     }
 
     // Reflected by DS implementation when LogService gone 
     private void unsetLogService(LogService logService) {
-    	logService.log(LogService.LOG_WARNING, "Unbound log service from HelloWorld");
+    	System.out.println("Unbound log service from HelloWorld");
         this.logService = null;
     }
 

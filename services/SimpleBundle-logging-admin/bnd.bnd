@@ -5,7 +5,7 @@ Private-Package: io.github.mnl.osgiGettingStarted.loggingBundle
 	osgi.core;version=4.3.1
 Bundle-Activator: io.github.mnl.osgiGettingStarted.loggingBundle.Activator
 -runfw: org.apache.felix.framework;version='[7.0.3,7.1)'
--runee: JavaSE-11
+-runee: JavaSE-17
 -runkeep: true
 -runbundles: \
 	org.apache.felix.log,\
@@ -19,4 +19,5 @@ Bundle-Activator: io.github.mnl.osgiGettingStarted.loggingBundle.Activator
 	org.apache.felix.scr,\
 	org.osgi.util.promise,\
 	org.osgi.util.function,\
-	SimpleBundle-logging-admin
+	SimpleBundle-logging-admin,\
+	org.osgi.service.component

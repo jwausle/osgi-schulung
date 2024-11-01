@@ -1,5 +1,5 @@
 -runfw: org.apache.felix.framework;version='[7.0.3,7.0.3]'
--runee: JavaSE-11
+-runee: JavaSE-17
 -runrequires: \
 	bnd.identity;id=SimpleBundle-DM,\
 	bnd.identity;id='org.apache.felix.gogo.command',\
@@ -16,4 +16,9 @@
 	org.apache.felix.scr;version='[2.2.0,2.2.1)',\
 	org.osgi.service.cm;version='[1.6.0,1.6.1)',\
 	org.osgi.service.metatype;version='[1.4.0,1.4.1)',\
-	osgi.promise;version='[6.0.0,6.0.1)'
+	osgi.promise;version='[6.0.0,6.0.1)',\
+	de.mnl.osgi.osgi2jul;version=1.1.6,\
+	de.mnl.osgi.coreutils;version=2.0.0,\
+	
+-runproperties: \
+    org.osgi.service.log.admin.loglevel=INFO

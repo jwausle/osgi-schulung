@@ -1,5 +1,5 @@
 -runfw: org.apache.felix.framework;version='[7.0.3,7.1)'
--runee: JavaSE-11
+-runee: JavaSE-17
 -runbundles: \
 	org.apache.felix.log,\
 	org.apache.felix.gogo.command,\
@@ -12,4 +12,5 @@
     SimpleBundle-logging;startlevel=3,\
     *;startlevel=2
 -runproperties: \
-    org.osgi.framework.startlevel.beginning=2
+    org.osgi.framework.startlevel.beginning=2,\
+    org.osgi.service.log.admin.loglevel=INFO

@@ -1,5 +1,7 @@
 package io.github.mnl.osgiGettingStarted.loggingBundle;
 
+import java.util.concurrent.CompletableFuture;
+
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
@@ -19,11 +21,13 @@ public class Activator implements BundleActivator {
      * tracker detects the availability of all required services. */
     @Override
     public void start(BundleContext context) throws Exception {
+    	System.out.println("test");
     	this.helloWorld = new HelloWorld();
     	registerService = context.registerService(HelloWorld.class, this.helloWorld , null);
     	
     	ServiceReference<LogService> serviceReference = context.getServiceReference(LogService.class);
     	logService = context.getService(serviceReference);
+    	CompletableFuture.runAsync(() -> { this.helloWorld.run();});
     }
 
     /** As before, this method stops our component, but in a different way. It stops 

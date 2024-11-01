@@ -1,5 +1,13 @@
 # de.jwausle.osgi.api.consumer.v1
 
+## Bundle start level (Default)
+
+> bnd-sl-default.bndrun
+
+* `frameworklevel` --> 1
+* `bundlelevel 0` --> 0
+* `bundlelevel 1` --> 1
+
 ## Bundle start level
 
 > bnd-sl-default-3.bndrun
