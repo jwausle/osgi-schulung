@@ -23,7 +23,7 @@ public class RunCommand {
 			Class<?> optionalClass = Class.forName("de.jwausle.osgi.classpath.Api");
 			Runnable runnable = (Runnable) optionalClass.newInstance();
 			runnable.run();
-		} catch (Exception e) {
+		} catch (Throwable e) {
 			e.printStackTrace();
 		}
 	}
