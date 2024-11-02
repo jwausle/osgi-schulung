@@ -1,5 +1,7 @@
 # Declarative Service
 
+Same as SimpleBundle-DS0 but with build time annotations.
+
 ## With waring every 5 seconds
 
 > Run: bnd.bndrun

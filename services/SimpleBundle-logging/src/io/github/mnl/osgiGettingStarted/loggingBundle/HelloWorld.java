@@ -23,9 +23,10 @@ public class HelloWorld extends Thread {
         System.out.println("Hello World!");
         while (!isInterrupted()) {
             try {
-                Activator.logService.log(LogService.LOG_INFO, "Hello Word sleeping");
+                Activator.logService.log(LogService.LOG_WARNING, "Hello Word sleeping");
                 sleep (5000);
             } catch (InterruptedException e) {
+            	System.out.println("Break Hello World!");
                 break;
             }
         }

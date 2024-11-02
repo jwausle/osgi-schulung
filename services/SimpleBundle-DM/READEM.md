@@ -1,5 +1,7 @@
 # Added 
 
+Felix Dependency manager Builder don't register HelloWorld.
+
 > Run `bnd.bndrun`
 
 ```

@@ -1,5 +1,7 @@
 # de.jwausle.osgi.api.consumer.v1
 
+Control bundle start order with framework and bundle level.
+
 ## Bundle start level (Default)
 
 > bnd-sl-default.bndrun

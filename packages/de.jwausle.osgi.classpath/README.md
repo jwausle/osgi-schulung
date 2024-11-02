@@ -1,6 +1,12 @@
 # Samples
 
+The `jw:run` try to show guava Cache.class classpath resource.
+
+> Java run Main.class 
+
 ## 1) -manifest: ./META-INF/MANIFEST-simple.MF 
+
+Getting started with gogo commands `help,headers,lb,bundle,inspect`.
 
 > bnd-default.bndrun
 
@@ -21,6 +27,8 @@ osgi.wiring.package; de.jwausle.osgi.classpath 0.0.0 [UNUSED]
 ```
 
 ## 2) -manifest: ./META-INF/MANIFEST-default.MF
+
+Bundle without guava import will fail with NoClassDefError.
 
 > bnd-default.bndrun
 
@@ -55,7 +63,9 @@ Caused by: java.lang.NoClassDefFoundError: com/google/common/cache/Cache
 
 > Warum? import com.google.common.cache.Cache; cannot imported
 
-## 3)  -manifest: ./META-INF/MANIFEST-import-cache.MF
+## 3)  -manifest: ./META-INF/MANIFEST-import-cache.MF | ./META-INF/MANIFEST-require-bundle-cache.MF
+
+Bundle with guava import lead to successful `jw:run` execution.
 
 > bnd-default.bndrun (fail)
 > bnd-guava29.bndrun
@@ -150,6 +160,8 @@ osgi.wiring.package; (&(osgi.wiring.package=com.google.common.cache)(version>=29
 
 ## -manifest: ./META-INF/MANIFEST-import-cache29.MF
 
+Bundle import package>=29 resolve in highest available package wiring(31).
+
 > bnd-guava31.bndrun
 
 ```
@@ -163,6 +175,8 @@ osgi.wiring.package; (&(osgi.wiring.package=com.google.common.cache)(version>=29
 ```
 
 ## -manifest: ./META-INF/MANIFEST-import-cache29-30.MF
+
+Bundle import package[29,30) resolve in highest available package wiring(29).
 
 > bnd-guava31.bndrun
 

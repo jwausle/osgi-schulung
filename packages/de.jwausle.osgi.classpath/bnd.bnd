@@ -4,17 +4,19 @@ Export-Package: de.jwausle.osgi.classpath
 -noimportjava: true
 -nouses: true
 # 1) Export without version -> 0.0.0 
-#-manifest: ./META-INF/MANIFEST-simple.MF
+# -manifest: ./META-INF/MANIFEST-simple.MF
 # 2) Export with version 
 #-manifest: ./META-INF/MANIFEST-default.MF
-# Import guava.cache  
-#-manifest: ./META-INF/MANIFEST-import-cache.MF
+# 3) Require Bundle 
+#-manifest: ./META-INF/MANIFEST-require-bundle-cache.MF
+# 4) Import Package guava.cache  
+-manifest: ./META-INF/MANIFEST-import-cache.MF
 # Import guava.cache with version 29.0  
 #-manifest: ./META-INF/MANIFEST-import-cache29.MF
 # Import guava.cache with version 29.0-30.0  
 #-manifest: ./META-INF/MANIFEST-import-cache29-30.MF
 # Export alternative version=2.0.0
--manifest: ./META-INF/MANIFEST-export-alt-version.MF
+#-manifest: ./META-INF/MANIFEST-export-alt-version.MF
 -buildpath: \
 	com.google.guava;version='29.0',\
 	org.osgi.framework

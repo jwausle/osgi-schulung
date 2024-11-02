@@ -25,6 +25,7 @@ RegisteredServices   [HelloWorld]
 ServicesInUse        [LogService | LoggerFactory]
 ```
 
+
 # service reference
 
 > Run: bndrun-active.bndrun
@@ -46,6 +47,12 @@ g! each (bundles) { $it registeredservices }
 null
 null
 [HelloWorld]
+```
+
+## What do the HelloWorld service
+
+```
+
 ```
 
 # service properties 

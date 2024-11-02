@@ -1,5 +1,7 @@
 # Registered services
 
+ServiceTracker example to show when log service gone and come back.
+
 > Run: bndrun-resolved.bndrun
 
 ```

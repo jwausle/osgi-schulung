@@ -1,5 +1,7 @@
 # Declarative Service
 
+Handwritten OSGI-INF/HelloWorld.xml
+
 ## Without waring every 5 seconds
 
 > Run: bnd.bndrun

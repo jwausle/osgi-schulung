@@ -4,3 +4,9 @@ Bundle-Name: de.jwausle.osgi.classpath
 Bundle-SymbolicName: de.jwausle.osgi.classpath
 Bundle-Version: 1.0.0.manual
 Export-Package: de.jwausle.osgi.classpath
+Comment: -------------------------------------
+Comment: No Import-Package: com.google.common.cache 
+Comment: No Require-Bundle: com.google.guava
+Comment: No Activator
+Comment: - Register no RunCommand 'jw:run'
+Comment: -------------------------------------

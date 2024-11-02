@@ -1,3 +1,6 @@
+# Config admin example
+
+(Re)set the waitTime of the HelloWorld service.
 
 ```
 g! cm:list

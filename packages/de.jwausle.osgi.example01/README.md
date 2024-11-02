@@ -1,5 +1,7 @@
 # Example 01
 
+2 Commands(`jw:dyn,jw:opt`) to load+init+use dynamic and optional classes.
+
 ## Optional vs Dynamic Import > Class not found
 
 > Run: bndrun-default.bndrun
@@ -124,6 +126,9 @@ g! dyn
 
 ## http://localhost:8888/system/console
 
+Browse: http://localhost:8888/system/console/configMgr 
+
+* User: admin, Password: admin
+
 > https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html
 
-User: admin, Password: admin

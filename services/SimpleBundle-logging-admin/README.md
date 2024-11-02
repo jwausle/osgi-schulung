@@ -1,3 +1,8 @@
+# Change default log service level error to info
+
+Then will logs from the HelloWorld service logged.
+
+
 cm:get org.osgi.service.log.admin# Change log level
 
 > https://mnlipp.github.io/osgi-getting-started/ConfigurationAdmin.html

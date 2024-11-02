@@ -1,5 +1,10 @@
 # Only Fragment host
 
+Fragment host and bundle provide the same file `folder/file.txt` and 2 commands
+
+* `fgm` from host to show all context:folder/file.txt
+* `fgm2` from bundle with the same impl
+
 > Run: bndrun-host-only.bndrun
 
 ```
