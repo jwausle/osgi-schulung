@@ -2,6 +2,7 @@
 
 * Slides ([link](https://docs.google.com/presentation/d/1ceQKK2ygEo5bZ376fBNTtGkjrnVfpt47Ptmqq-MBeQk/edit?usp=sharing))
 * Repository ([link](https://github.com/jwausle/osgi-schulung))
+* Video (google: https://meet.google.com/oaa-hvvj-gdh)
 
 ## Required tools
 
