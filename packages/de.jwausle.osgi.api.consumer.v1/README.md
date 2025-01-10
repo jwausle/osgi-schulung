@@ -42,7 +42,7 @@ START LEVEL 2
 
 ## Framework start level
 
-> bnd-sl-default-4.bndrun
+> bnd-sl-default-4-start-all.bndrun
 
 ```
 g! lb

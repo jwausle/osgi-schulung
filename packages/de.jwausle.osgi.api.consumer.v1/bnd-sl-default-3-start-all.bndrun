@@ -16,8 +16,8 @@
 # all unset bundles get the startlevel set to 3:=(max(startlevel)+1)
 -runbundles+: \
 	org.apache.felix.gogo.command;startlevel=2,\
-	org.apache.felix.gogo.runtime;startlevel=2,\
-	org.apache.felix.gogo.shell;startlevel=2
+	org.apache.felix.gogo.runtime;startlevel=3,\
+	org.apache.felix.gogo.shell;startlevel=4
 
 -runproperties: \
-    org.osgi.framework.startlevel.beginning=3
+    org.osgi.framework.startlevel.beginning=5

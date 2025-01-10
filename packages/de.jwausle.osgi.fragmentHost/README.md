@@ -3,7 +3,7 @@
 Fragment host and bundle provide the same file `folder/file.txt` and 2 commands
 
 * `fgm` from host to show all context:folder/file.txt
-* `fgm2` from bundle with the same impl
+* `fgm2` from fragment bundle with the same impl
 
 > Run: bndrun-host-only.bndrun
 
@@ -24,7 +24,14 @@ g! inspect cap osgi.wiring.package 7
 de.jwausle.osgi.fragmentHost [7] provides:
 ------------------------------------------
 osgi.wiring.package [EMPTY]
+
+g! fgm2
+gogo: CommandNotFoundException: Command not found: fgm2
+
+g! lb
 ```
+
+> Bec
 
 ## With Fragment host
 

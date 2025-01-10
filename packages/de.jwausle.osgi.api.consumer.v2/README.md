@@ -1,7 +1,7 @@
 # de.jwausle.osgi.api.consumer.v1
 
-2 static bundles `provider.v1(1.0.0) and this consumer.v2(2.0.0) and
-1 variable bundle `provider.v2(2.0.0 | 3.0.0 | 1.0.0) to 
+* 2 static bundles `provider.v1(1.0.0) and this consumer.v2(2.0.0) and
+* 1 variable bundle `provider.v2(2.0.0 | 3.0.0 | 1.0.0) to 
 demonstrate different package wiring.
 
 ```
@@ -24,9 +24,11 @@ demonstrate different package wiring.
       +-------------+      
 ```
 
-> -manifest: ./META-INF/MANIFEST.MF
+> -manifest: provider.v2/META-INF/MANIFEST.MF (export 2.0)
 
 ## Provider provide package
+
+> consumer.v2/bnd.bndrun
 
 ```
 g! inspect cap osgi.wiring.package 5 # p.v1 -> c.v1
@@ -35,6 +37,8 @@ g! inspect cap osgi.wiring.package 7 # p.v2 -> c.v2
 
 ## Consumer require package
 
+> consumer.v2/bnd.bndrun
+
 ```
 g! inspect req osgi.wiring.package 4 # c.v1 -> p.v1
 g! inspect req osgi.wiring.package 6 # c.v2 -> p.v2
@@ -42,15 +46,16 @@ g! inspect req osgi.wiring.package 6 # c.v2 -> p.v2
 
 ## Bundle Version provider.v2 = ''
 
-> -manifest: ./META-INF/MANIFEST1.MF
+> -manifest: provider.v2/META-INF/MANIFEST1.MF
 
 Consumer v1,v2 wire provider.v1.
 
 
 ## Bundle Version provider.v2 = 3.0.0
 
-> -manifest: ./META-INF/MANIFEST2.MF
+> -manifest: provider.v2/META-INF/MANIFEST2.MF
 
+> consumer.v2/bnd.bndrun
 
 ```
 g! inspect cap osgi.wiring.package 7
@@ -62,7 +67,9 @@ osgi.wiring.package; de.jwausle.osgi.api.provider 3.0.0 required by:
 
 ## Bundle Version provider.v2 package export  = 1.0.1
 
-> > -manifest: ./META-INF/MANIFEST3.MF
+> -manifest: provider.v2/META-INF/MANIFEST3.MF
+
+> consumer.v2/bnd.bndrun
 
 ```
 g! inspect cap osgi.wiring.package 7

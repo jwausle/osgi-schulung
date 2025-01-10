@@ -1,2 +1,7 @@
 Export-Package: de.jwausle.osgi.dynamicPackage
 -privatepackage: de.jwausle.osgi.dynamicPackage.internal
+
+
+#-includeresource: liberaries/=./lib/jquery-3.6.1-SNAPSHOT.jar;lib:=true
+
+Bundle-ClassPath: .
