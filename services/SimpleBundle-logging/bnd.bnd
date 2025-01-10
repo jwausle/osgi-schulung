@@ -1,6 +1,8 @@
 Bundle-Version: 1.1.0
 Private-Package: io.github.mnl.osgiGettingStarted.loggingBundle
 -buildpath: \
-	osgi.cmpn;version=4.3.1,\
-	osgi.core;version=4.3.1
+	osgi.cmpn;version='4.3.1',\
+	osgi.core;version='4.3.1',\
+	org.apache.felix.log,\
+	org.osgi.service.log
 Bundle-Activator: io.github.mnl.osgiGettingStarted.loggingBundle.Activator

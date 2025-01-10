@@ -9,6 +9,8 @@
 	de.mnl.osgi.coreutils;version=2.0.0,\
 	SimpleBundle-logging
 -runbundles+: \
+	de.mnl.osgi.coreutils;startlevel=4,\
+	de.mnl.osgi.osgi2jul;startlevel=3,\
     SimpleBundle-logging;startlevel=3,\
     *;startlevel=2
 -runproperties: \

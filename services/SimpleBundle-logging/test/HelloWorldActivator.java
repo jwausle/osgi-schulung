@@ -17,7 +17,7 @@ public class HelloWorldActivator implements BundleActivator {
                 @Override
                 public LogService addingService(ServiceReference<LogService> reference) {
                     LogService result = super.addingService(reference);
-                    helloWorld = new HelloWorld(result);
+                    helloWorld = new HelloWorld(context);
                     System.out.println("Hello World started.");
                     return result;
                 }

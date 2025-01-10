@@ -15,6 +15,7 @@ public class HelloWorld implements Runnable {
 
     private Thread runner;
     
+    
     //@Reference
     private void setLogService(LogService logService) {
         this.logService = logService;

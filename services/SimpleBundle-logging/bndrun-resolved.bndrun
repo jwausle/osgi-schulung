@@ -14,3 +14,4 @@
 -runproperties: \
     org.osgi.framework.startlevel.beginning=2,\
     org.osgi.service.log.admin.loglevel=INFO
+-runfw: org.apache.felix.framework;version='[7.0.3,7.1)'

@@ -38,6 +38,15 @@ g! lb
 g! servicereferences io.github.mnl.osgiGettingStarted.loggingBundle.HelloWorld null
 000020   7 HelloWorld  
 
+g! stop 1
+g! bundle 7
+...
+RegisteredServices   null
+ServicesInUse        null
+
+
+g! start 1
+
 g! each (bundles) { $it registeredservices }
 [Resolver, PackageAdmin, StartLevel, Condition, Object | Launcher]
 [LogService | LoggerFactory, LogReaderService, LoggerAdmin]

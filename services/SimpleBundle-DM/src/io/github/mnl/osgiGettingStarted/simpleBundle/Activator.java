@@ -9,20 +9,21 @@ public class Activator extends DependencyActivatorBase {
 	
 	public void start(BundleContext context) throws Exception {
 	    super.start(context);
-		System.out.println("Starting bundle");		
+		System.out.println("Starting bundle");
 	}
 	
 	public void init(BundleContext context, DependencyManager manager)
 			throws Exception {
-		manager.add(
+		manager.add(				
 			createComponent() // Create a new service component as instance...
+				.setInterface(HelloWorld.class.getName(), null)
 				.setImplementation(HelloWorld.class) // ... of the HelloWorld class.
 				.add(             // Add to the service component ...
 					createServiceDependency() // ... a dependency on ...
 					.setService(LogService.class) // ... the LogService service ...
 					.setRequired(true) // ... but don't start the instance
 					                   // before the LogService is available.
-				)
+				)			
 		);
 		System.out.println("Added declarative service HelloWorld");
 	}

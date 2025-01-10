@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scr:component 
-	xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" 
+	xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0" 
 	name="io.github.mnl.osgiGettingStarted.simpleBundle.HelloWorld" 
 	activate="start" 
 	deactivate="stop">
