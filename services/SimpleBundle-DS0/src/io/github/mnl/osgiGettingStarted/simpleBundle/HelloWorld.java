@@ -4,9 +4,6 @@
 package io.github.mnl.osgiGettingStarted.simpleBundle;
 
 import org.osgi.service.component.ComponentContext;
-import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Deactivate;
-import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.log.LogService;
 
 public class HelloWorld implements Runnable {
@@ -16,25 +13,25 @@ public class HelloWorld implements Runnable {
     private Thread runner;
     
     
-    //@Reference
-    private void setLogService(LogService logService) {
+    //Reflected by DS implementation when LogService gone
+    protected void setLogService(LogService logService) {
         this.logService = logService;
         System.out.println("Bound log service to HelloWorld");
     }
 
-    // Reflected by DS implementation when LogService gone 
-    private void unsetLogService(LogService logService) {
+    //Reflected by DS implementation when LogService gone 
+    protected  void unsetLogService(LogService logService) {
     	System.out.println("Unbound log service from HelloWorld");
         this.logService = null;
     }
 
-    //@Activate
+    //Reflected by DS implementation on start
     public void start(ComponentContext ctx) {
         runner = new Thread(this);
         runner.start();
     }
     
-    //@Deactivate
+    //Reflected by DS implementation on stop
     public void stop(ComponentContext ctx) {
         runner.interrupt();
         try {
