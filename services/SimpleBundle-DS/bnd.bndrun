@@ -15,4 +15,8 @@
 	SimpleBundle-DS
 
 -runproperties: \
-	org.osgi.service.log.admin.loglevel=INFO	
+	org.osgi.service.log.admin.loglevel=INFO
+
+#Disable logging every 5 seconds	
+#-runproperties: \
+#	org.osgi.service.log.admin.loglevel=WARNING

@@ -17,17 +17,17 @@ import org.osgi.service.log.LogService;
 @Component(service={})
 public class HelloWorld implements Runnable {
 
-	private static LogService logService;
+	private LogService logService;
 
 	private Thread runner;
 	
 	@Reference
-	private void setLogService(LogService logService) {
+	protected void setLogService(LogService logService) {
 		this.logService = logService;
 		logService.log(LogService.LOG_WARNING, "Bound log service to HelloWorld");
 	}
 
-	private void unsetLogService(LogService logService) {
+	protected void unsetLogService(LogService logService) {
 		logService.log(LogService.LOG_WARNING, "Unbound log service from HelloWorld");
 		this.logService = null;
 	}

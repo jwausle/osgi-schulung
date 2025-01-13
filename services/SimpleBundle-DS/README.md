@@ -14,11 +14,11 @@ g! scr:list
 io.github.mnl.osgiGettingStarted.simpleBundle.HelloWorld in bundle 15 (SimpleBundle-DS0:1.2.0) enabled, 1 instance.
     Id: 1, State:ACTIVE
 
-g! stop 15
+g! stop 12
 g! scr:list
 No component descriptions found
 
-g! start 15
+g! start 12
 
 g! scr:disable io.github.mnl.osgiGettingStarted.simpleBundle.HelloWorld
 true
