@@ -1,51 +1,66 @@
 # Added 
 
-Felix Dependency manager Builder don't register HelloWorld.
-
 > Run `bnd.bndrun`
 
 ```
-g! allservicereferences null null
-000004   0 Condition                                
-000011   4 Converter                                
-000014   4 Posix                                    
-000010   3 CommandProcessor                         
-000013   4 Procedural                               
-000003   0 StartLevel                               
-000025   6 ManagedService                           org.apache.felix.scr.ScrService
-000024   3 Converter                                
-000018   5 LogReaderService                         
-000008   2 Files                                    
-000009   3 ThreadIO                                 
-000001   0 Resolver                                 
-000007   2 Inspect                                  
-000019   5 LoggerAdmin                              
-000027   1 Runnable                                 
-000016   4 Shell                                    
-000023   6 ComponentCommands                        
-000028   1 SrvCommand                               
-000006   2 Basic                                    
-000026   6 MetaTypeProvider                         
-000017   5 LogService | LoggerFactory               
-000005   0 Object | Launcher                        
-000020   6 ServiceComponentRuntime                  
-000015   4 Telnet                                   
-000002   0 PackageAdmin                             
-000012   4 Builtin
+g! each (servicereferences io.github.mnl.osgiGettingStarted.simpleBundle.HelloWorld null) { $it properties } 
+[service.id=19, objectClass=[Ljava.lang.String;@7d3cf131, service.scope=singleton, service.bundleid=1]
 
-g! each (allservicereferences null null) { $it properties } 
-[service.id=4, objectClass=[Ljava.lang.String;@4dec3e11, service.scope=singleton, osgi.condition.id=true, service.bundleid=0]
-...
-[osgi.command.function=[Ljava.lang.String;@759e1afe, service.id=12, objectClass=[Ljava.lang.String;@6d47ca3, osgi.command.scope=gogo, service.scope=singleton, service.bundleid=4]
+g! inspect cap service 1
+SimpleBundle-DM [1] provides:
+-----------------------------
+service; io.github.mnl.osgiGettingStarted.simpleBundle.HelloWorld with properties:
+   service.bundleid = 1
+   service.id = 19
+   service.scope = singleton    
+
+g! help dm
+
+g! dm
+[1] SimpleBundle-DM
+ [0] io.github.mnl.osgiGettingStarted.simpleBundle.HelloWorld registered
+    org.osgi.service.log.LogService service required available   
+   
+g! dm s '(objectclass=io.github.mnl.osgiGettingStarted.simpleBundle.HelloWorld)' 
+[1] SimpleBundle-DM
+ [0] io.github.mnl.osgiGettingStarted.simpleBundle.HelloWorld registered
+    org.osgi.service.log.LogService service required available   
+
+g! dm c '.*Hello.*'
+[1] SimpleBundle-DM
+ [0] io.github.mnl.osgiGettingStarted.simpleBundle.HelloWorld registered
+    org.osgi.service.log.LogService service required available   
 ```
 
-2) Service references
+dm command doc: https://felix.apache.org/documentation/subprojects/apache-felix-dependency-manager/tutorials/leveraging-the-shell.html
+
+## Trouble shouting when LogService not available
+
+> Run `bndrun.bnd`
 
 ```
-g! servicereferences org.osgi.service.startlevel.StartLevel null
-000003   0 StartLevel                               
+g! bundle 1
+RegisteredServices   [HelloWorld]
+ServicesInUse        [LogService | LoggerFactory]
 
-g! each (servicereferences org.osgi.service.startlevel.StartLevel null) { $it properties }
-[service.id=3, objectClass=[Ljava.lang.String;@1957779c, service.scope=singleton, service.bundleid=0]
+g! stop 7
+g! lb
+    7|Resolved   |    1|Apache Felix Log Service (1.2.6)|1.2.6
+    
+g! bundle 1
+RegisteredServices   []
+ServicesInUse        null    
+
+g! dm wtf
+1 unregistered components found
+-------------------------------
+Please note that the following bundles are in the RESOLVED state:
+ * [7] org.apache.felix.log
+The following service(s) are missing: 
+ * org.osgi.service.log.LogService for bundle SimpleBundle-DM
+
+g! dm c '.*Hello.*'
+[1] SimpleBundle-DM
+ [0] io.github.mnl.osgiGettingStarted.simpleBundle.HelloWorld unregistered
+    org.osgi.service.log.LogService service required unavailable   
 ```
-
