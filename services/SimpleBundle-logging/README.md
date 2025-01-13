@@ -18,11 +18,16 @@ g! allservicereferences null null
 ..
 000004   0 Condition
 
+g! inspect cap service 
+
 g! bundlelevel -s 2 7
 g! bundle 7
 ...
 RegisteredServices   [HelloWorld]
 ServicesInUse        [LogService | LoggerFactory]
+
+g! inspect cap service 7
+g! each (servicereferences io.github.mnl.osgiGettingStarted.loggingBundle.HelloWorld null) { $it properties }
 ```
 
 

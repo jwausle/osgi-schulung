@@ -16,6 +16,8 @@ g! bundle 7
 RegisteredServices   [HelloWorld]
 ServicesInUse        [LogService | LoggerFactory]
 ...
+
+g! each (servicereferences io.github.mnl.osgiGettingStarted.loggingBundle.HelloWorld null) { $it properties }
 ```
 
 # service reference
