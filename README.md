@@ -6,9 +6,9 @@
 
 ## Required tools
 
-* Java>=8 (Last test with Java11)
-* Eclipse>=2022-03 
-* Bndtools  
+* Java>=17 (Last test with Java21)
+* Eclipse>=2024-09 
+* Bndtools
 
 ## OSGi './packages'
 
